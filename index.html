@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Detection</title>
+</head>
+<body>
+    <h1>Upload Two Images for Change Detection</h1>
+    <form method="post" enctype="multipart/form-data">
+        <input type="file" name="image1" required><br><br>
+        <input type="file" name="image2" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    {% if result_image %}
+        <h2>Input Image 1:</h2>
+        <img src="{{ input_image1 }}" width="300"><br>
+        <h2>Input Image 2:</h2>
+        <img src="{{ input_image2 }}" width="300"><br>
+        <h2>Detected Difference:</h2>
+        <img src="{{ result_image }}" width="300">
+    {% endif %}
+</body>
+</html>
